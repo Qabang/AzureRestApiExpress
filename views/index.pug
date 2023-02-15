@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    header(id='header')
+        form(action='/', method='POST', class="myForm")
+            label(for='date') Choose start date
+            div
+                <input id='date' type="date" name="date" max=#{todaysDate}>
+                <input type="submit" name="submit" value="Show">
+    main
+        if choosenDate && todaysDate
+            div(class='choosen-interval') #{choosenDate} - #{todaysDate}
+
+        if BlazorItems
+            p: b Portal 1.5
+            <ul>
+                each item in BlazorItems
+                  case item.url
+                    when null
+                      li #{item.title}
+                    default
+                      li: a(href=item.url) #{item.title}
+            </ul>
+        if LegacyItems
+            p: b Legacy Apps Portal 1.5
+            <ul>
+            each item in LegacyItems
+                case item.url
+                    when null
+                        li #{item.title}
+                    default
+                        li: a(href=item.url) #{item.title}
+            </ul>

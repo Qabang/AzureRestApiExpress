@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Graphic-regular';
+  src: url("/Fonts/Graphik-Regular-Web.woff2") format("woff2"), url("/Fonts/Graphik-Regular-Web.woff") format("woff"); }
+
+#header {
+  background-color: #fcde06;
+  display: flex;
+  justify-content: center;
+  padding: 60px; }
+  #header form {
+    display: flex;
+    flex-direction: column; }
+    #header form input {
+      padding: 8px 16px;
+      border-radius: 5px;
+      border-color: rgba(0, 0, 0, 0.25); }
+      #header form input[type=submit] {
+        background: rgba(0, 0, 0, 0.9);
+        color: rgba(255, 255, 255, 0.9); }
+        #header form input[type=submit]:hover {
+          background: rgba(26, 26, 26, 0.9);
+          cursor: pointer; }
+
+@font-face {
+  font-family: 'Graphic-regular';
+  src: url("/Fonts/Graphik-Regular-Web.woff2") format("woff2"), url("/Fonts/Graphik-Regular-Web.woff") format("woff"); }
+
+#header {
+  background-color: #fcde06;
+  display: flex;
+  justify-content: center;
+  padding: 60px; }
+  #header form {
+    display: flex;
+    flex-direction: column; }
+    #header form input {
+      padding: 8px 16px;
+      border-radius: 5px;
+      border-color: rgba(0, 0, 0, 0.25); }
+      #header form input[type=submit] {
+        background: rgba(0, 0, 0, 0.9);
+        color: rgba(255, 255, 255, 0.9); }
+        #header form input[type=submit]:hover {
+          background: rgba(26, 26, 26, 0.9);
+          cursor: pointer; }
+
+main {
+  font-family: Graphic-regular;
+  font-size: 11pt;
+  padding: 30px; }
+  main .choosen-interval {
+    text-align: center;
+    margin: 0 auto 30px auto; }
+  main a {
+    color: rgba(0, 0, 0, 0.9); }
+  main ul {
+    list-style-image: url("../../Assets/logo-icon.svg"); }
+
+body {
+  font-family: Graphic-regular;
+  font-size: 11pt;
+  margin: 0;
+  padding: 0; }

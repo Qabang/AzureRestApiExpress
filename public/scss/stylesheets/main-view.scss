@@ -1,0 +1,21 @@
+@import 'variables.scss';
+@import 'header.scss';
+
+main {
+    font-family: Graphic-regular;
+    font-size: $paragraph-size;
+    padding: 30px;
+
+    .choosen-interval {
+        text-align: center;
+        margin: 0 auto 30px auto;
+    }
+
+    a {
+        color: $text-color;
+    }
+
+    ul {
+        list-style-image: url('../../Assets/logo-icon.svg')
+    }
+}

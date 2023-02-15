@@ -1,0 +1,2 @@
+C:\projects\egna\AzureRestApiExpress\obj\Release\AzureRestApiExpress.esproj.SuggestedBindingRedirects.cache
+C:\projects\egna\AzureRestApiExpress\obj\Release\AzureRestApiExpress.esproj.CoreCompileInputs.cache

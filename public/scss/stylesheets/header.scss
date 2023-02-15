@@ -1,0 +1,27 @@
+#header {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            padding: 8px 16px;
+            border-radius: 5px;
+            border-color: $border-color;
+
+            &[type=submit] {
+                background: $accent-color;
+                color: $text-color-inverted;
+
+                &:hover{
+                    background: lighten($accent-color, 10%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
