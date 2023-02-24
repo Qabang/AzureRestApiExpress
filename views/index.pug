@@ -9,25 +9,43 @@ block content
                 <input type="submit" name="submit" value="Show">
     main
         if choosenDate && todaysDate
-            div(class='choosen-interval') #{choosenDate} - #{todaysDate}
+            div(class='choosen-interval') 
+                p Showing updates between:
+                p #{choosenDate} - #{todaysDate}
+        section(id="list-wrapper")
+            if TfsItems
+                p: b Portal 1.0
+                <ul>
+                    each item in TfsItems
+                      case item.url
+                        when null
+                          li #{item.title}
+                        default
+                          li: a(href=item.url) #{item.title}
+                </ul>
+            if BlazorItems
+                p: b Portal 1.5
+                <ul>
+                    each item in BlazorItems
+                      case item.url
+                        when null
+                          li #{item.title}
+                        default
+                          li: a(href=item.url) #{item.title}
+                </ul>
+            if LegacyItems
+                p: b Legacy Apps Portal 1.5
+                <ul>
+                each item in LegacyItems
+                    case item.url
+                        when null
+                            li #{item.title}
+                        default
+                            li: a(href=item.url) #{item.title}
+                </ul>
+        if choosenDate && todaysDate
+            form(onsubmit='return sendEmail(event)', method='POST', Action='/send', id='generateEmail', name='emailform')
+                <input type="text" name="htmlbody" id="htmlbody" value="Show" hidden>
+                <input type="submit" name="btnSubmit" value="Generate html file">
 
-        if BlazorItems
-            p: b Portal 1.5
-            <ul>
-                each item in BlazorItems
-                  case item.url
-                    when null
-                      li #{item.title}
-                    default
-                      li: a(href=item.url) #{item.title}
-            </ul>
-        if LegacyItems
-            p: b Legacy Apps Portal 1.5
-            <ul>
-            each item in LegacyItems
-                case item.url
-                    when null
-                        li #{item.title}
-                    default
-                        li: a(href=item.url) #{item.title}
-            </ul>
+

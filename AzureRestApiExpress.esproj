@@ -5,4 +5,7 @@
     <BuildCommand>
     </BuildCommand>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="public\Assets\Files\" />
+  </ItemGroup>
 </Project>
